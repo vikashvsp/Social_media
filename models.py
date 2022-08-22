@@ -5,7 +5,7 @@ ROOT=path.dirname(path.relpath((__file__)))
 def create_post(id,name,content):
     con=sql.connect(path.join(ROOT,'database.db'))
     cur=con.cursor()
-    cur.execute('insert into posts (id,name,content) values(?,?,?)',(id,name,content))
+    cur.execute('insert into posts (id,names,content) values(?,?,?)',(id,name,content))
     con.commit()
     con.close()
 def get_posts():

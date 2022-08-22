@@ -8,14 +8,14 @@
 </head>
 <body>
     <form action="/" method="post">
-        <input placeholder="ID",name='id'>
-        <input placeholder="Name",name='name'>
-        <input placeholder="Post content" name="post">
+        <input type="number" placeholder="ID",name='id'>
+        <input type="text" placeholder="Name",name='names'>
+        <input type="text" placeholder="Post content" name="post">
         <input type="submit" value="'Submit">
     </form>
     {% for post in posts%}
     <div>
-        {{ (post[1]) +': '+  str(post[2])}}
+        {{ (post[1]),(post[2])}}
     </div>
     {% endfor %}
 </body>
